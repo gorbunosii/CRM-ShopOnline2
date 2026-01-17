@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM</title>
+    <link rel="icon" type="image/png" href="/img/crm.png">
+        <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .form-wrapper {
+            width: 420px;
+            border: 1px solid #000;
+            padding: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 250px;
+            padding: 3px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 80px;
+            resize: none;
+        }
+
+        .discount {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 5px 10px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <div class="form-wrapper">
+            <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <label>Наименование</label>
+                <input type="text" name="name">
+
+                <label>Категория</label>
+                <input type="text" name="category">
+
+                <label>Единицы измерения</label>
+                <input type="text" name="units">
+
+                <label>Дисконт</label>
+                <div class="discount">
+                    <input type="checkbox" name="discount">
+                    <input type="text" name="discount">
+                </div>
+
+                <label>Описание</label>
+                <textarea></textarea>
+
+                <label>Количество</label>
+                <input type="number" name="count">
+
+                <label>Цена</label>
+                <input type="number" name="price">
+
+                <input type="file" name="file">
+
+                <br>
+                <button type="submit">Добавить товар</button>
+            </form>
+        </div>
+</body>
+</html>
